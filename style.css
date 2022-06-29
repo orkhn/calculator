@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #dde1e7;
+  font-family: "Orbitron", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  min-width: 38rem;
+  height: 70rem;
+  border: none;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
+    5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+/* Header Section */
+#header {
+  width: 90%;
+  text-align: end;
+}
+
+/* Display Section */
+.display-section {
+  width: 90%;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 1rem;
+  flex: 0 0 15rem;
+  box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
+    inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+}
+
+/* Button Section */
+.button-section {
+  width: 90%;
+  flex: 0 0 auto;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-content: center;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.button {
+  background-color: inherit;
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
+  border: none;
+  border-radius: 1.3rem;
+  box-shadow: -5px -5px 9px rgba(255, 255, 255, 0.45),
+    5px 5px 9px rgba(94, 104, 121, 0.3);
+  width: 7.2rem;
+  height: 7.2rem;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+}
+
+.number:hover,
+.number:active {
+  background-color: #cbd2df;
+}
+
+.dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.myself {
+  text-decoration: none;
+}
+/* A Media Query for smaller screens */
+@media only screen and (max-width: 450px) {
+  #container {
+    min-width: 90%;
+    height: 90vh;
+  }
+
+  #header {
+    margin: 1rem 0 2rem 0;
+  }
+
+  .display-section {
+    flex: 1 0 auto;
+  }
+
+  .button {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
+  .myself {
+    margin-bottom: 2rem;
+  }
+}
