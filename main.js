@@ -74,7 +74,7 @@ function setOperation(operator) {
 function evaluate() {
   if (currentOperation === null || shouldResetScreen) return;
   if (currentOperation === "÷" && currentOperationScreen.textContent === "0") {
-    alert("can't divide by zero!");
+    currentOperationScreen.textContent = "can't divide by zero!";
     return;
   }
   secondOperand = currentOperationScreen.textContent;
