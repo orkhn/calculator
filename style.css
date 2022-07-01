@@ -23,7 +23,6 @@ body {
 
 #container {
   min-width: 38rem;
-  height: 70rem;
   border: none;
   border-radius: 2rem;
   display: flex;
@@ -48,8 +47,18 @@ body {
   flex: 0 0 15rem;
   box-shadow: inset -5px -5px 9px rgba(255, 255, 255, 0.45),
     inset 5px 5px 9px rgba(94, 104, 121, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
 }
 
+.last-action,
+.current-action {
+  margin: 1rem;
+  font-size: 2.5rem;
+  text-align: end;
+}
 /* Button Section */
 .button-section {
   width: 90%;
@@ -77,14 +86,16 @@ body {
   transition: 0.2s all ease-in-out;
 }
 
-.number:hover,
-.number:active {
+.number:hover {
   background-color: #cbd2df;
 }
 
 .dark {
   background-color: #000;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .myself {
@@ -94,7 +105,7 @@ body {
 @media only screen and (max-width: 450px) {
   #container {
     min-width: 90%;
-    height: 90vh;
+    height: 88vh;
   }
 
   #header {
